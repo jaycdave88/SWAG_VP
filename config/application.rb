@@ -25,6 +25,7 @@ end
 
 require_relative ('./../app/controllers/swag_control.rb')
 require_relative ('./../app/views/swag_interface.rb')
+require_relative ('./../app/models/song_importer.rb')
 # Dir[APP_ROOT.join('app', 'views', '*.rb')].each do |view_file|
 #   filename = File.basename(view_file).gsub('.rb', '')
 #   autoload ActiveSupport::Inflector.camelize(filename), view_file

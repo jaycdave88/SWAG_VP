@@ -27,4 +27,15 @@ class View
     puts "Here are the correct answers to all the songs:"
     puts "[correct answers be here...]"
   end
+
+  def self.start_song
+    # puts a message saying song is going to start
+  end
+
+  def self.ask_question
+    puts "Whats the artist?!"
+
+  end
+
+
 end

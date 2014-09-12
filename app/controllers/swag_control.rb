@@ -30,7 +30,7 @@ class Controller
       #   accept_guesses
       # end
       # stop_timer
-      sleep(6) #sleep 6 seconds
+
       if evaluate_guess(View.get_guess) then
         increment_score
         View.correct_message
