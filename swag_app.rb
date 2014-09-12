@@ -1,1 +1,3 @@
-require "config/application.rb"
+require_relative "./config/application"
+
+Controller.run
