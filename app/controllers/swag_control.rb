@@ -23,19 +23,22 @@ class Controller
 
   def run_game(song_count=5)
     song_count.times do
-      current_song = game_session.cue_next_song
-      start_playing_song(current_song)
+
+      current_song = $song_hash.values[0]
+      play_song(current_song)
+      evaluate_guess
+      cue_next_song
       # start_timer
       # until ( guess == correct || song_finished? )
       #   accept_guesses
       # end
       # stop_timer
 
-      if evaluate_guess(View.get_guess) then
-        increment_score
-        View.correct_message
-      else
-        View.incorrect_message
+      # if evaluate_guess(View.get_guess) then
+      #   increment_score
+      #   View.correct_message
+      # else
+      #   View.incorrect_message
       end
 
       # reset_timer

@@ -35,7 +35,7 @@ class FileParser
 	def play_song(song_path)
 		View.start_song
 		sleep(2)
-		# SONG PLAYS
+		`open song_path`
 	end
 
 	def evaluate_guess
@@ -44,7 +44,7 @@ class FileParser
 		evaluate_guess = gets.chomp
 			if evaluate_guess == key
 				View.correct
-				increment_sco re
+				increment_score
 			else
 				View.incorrect
 			end
@@ -62,18 +62,15 @@ class FileParser
 	end
 
 	 def increment_score
-    @score += 1
+    $score += 1
   end
 
 
 
-
-
-
 end
 end
 
 
-# file_parser = FileParser.new()
+file_parser = FileParser.new()
 
-# puts file_parser.read_file
+puts file_parser.read_file
