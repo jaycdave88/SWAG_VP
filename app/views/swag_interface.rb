@@ -34,7 +34,6 @@ class View
 
   def self.ask_question
     puts "Whats the artist?!"
-
   end
 
 

@@ -42,9 +42,6 @@ class Controller
     end
   end
 
-  def increment_score
-    score += time_elapsed
-  end
 
   def start_playing_song(song)
 

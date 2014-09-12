@@ -42,13 +42,17 @@ class FileParser
 		sleep(6)
 		View.ask_question
 		evaluate_guess = gets.chomp
-			if evaluate_guess ==
+			if evaluate_guess == key
+				View.correct
+				increment_sco re
+			else
+				View.incorrect
 			end
 		end
 	end
 
 	def cue_next_song
-		$song_hash.pop
+		$finished_songs << $song_hash.pop
 	end
 
 	def reload
@@ -56,6 +60,10 @@ class FileParser
 			$song_hash << finished_song
 		end
 	end
+
+	 def increment_score
+    @score += 1
+  end
 
 
 
