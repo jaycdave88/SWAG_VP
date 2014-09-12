@@ -1,0 +1,8 @@
+artist name
+(path)
+
+this is test number 2
+test2
+
+this is going to be test number 3
+test3
