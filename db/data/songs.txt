@@ -1,14 +1,14 @@
 Aqua
-/Users/devmode/Desktop/swag_vp/Music/cut_songs/cut_song1.mp3
+/Users/apprentice/Desktop/swag_vp/SWAG_VP/db/data/cut_song1.mp3
 
 Queen
-/Users/devmode/Desktop/swag_vp/Music/cut_songs/cut_song5.mp3
+/Users/apprentice/Desktop/swag_vp/SWAG_VP/db/data/cut_song5.mp3
 
 Carly Rae Jepsen
-/Users/devmode/Desktop/swag_vp/Music/cut_songs/cut_song2.mp3
+/Users/apprentice/Desktop/swag_vp/SWAG_VP/db/data/cut_song2.mp3
 
 Taylor Swift
-/Users/devmode/Desktop/swag_vp/Music/cut_songs/cut_song3.mp3
+/Users/apprentice/Desktop/swag_vp/SWAG_VP/db/data/cut_song3.mp3
 
 PSY
-/Users/devmode/Desktop/swag_vp/Music/cut_songs/cut_song4.mp3
+/Users/apprentice/Desktop/swag_vp/SWAG_VP/db/data/cut_song4.mp3

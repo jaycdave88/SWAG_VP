@@ -27,8 +27,8 @@ class Controller
       current_song = $song_hash.values[0]
       p current_song
       game_session.play_song(current_song)
-      evaluate_guess
-      cue_next_song
+      game_session.evaluate_guess
+      game_session.cue_next_song
       # start_timer
       # until ( guess == correct || song_finished? )
       #   accept_guesses
