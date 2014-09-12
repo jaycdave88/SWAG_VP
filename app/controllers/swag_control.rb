@@ -29,6 +29,7 @@ class Controller
       game_session.play_song(current_song)
       game_session.evaluate_guess
       game_session.cue_next_song
+      View.clear_screen
       # start_timer
       # until ( guess == correct || song_finished? )
       #   accept_guesses
