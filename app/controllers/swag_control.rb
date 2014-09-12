@@ -23,8 +23,9 @@ class Controller
 
   def self.run_game(game_session,song_count=5)
     song_count.times do
-
+      p $song_hash
       current_song = $song_hash.values[0]
+      p current_song
       game_session.play_song(current_song)
       evaluate_guess
       cue_next_song

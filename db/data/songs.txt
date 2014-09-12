@@ -1,14 +1,14 @@
 Aqua
-/cut_song1.mp3
+/Users/devmode/Desktop/swag_vp/Music/cut_songs/cut_song1.mp3
 
 Queen
-/cut_song5.mp3
+/Users/devmode/Desktop/swag_vp/Music/cut_songs/cut_song5.mp3
 
 Carly Rae Jepsen
-/cut_song2.mp3
+/Users/devmode/Desktop/swag_vp/Music/cut_songs/cut_song2.mp3
 
 Taylor Swift
-/cut_song3.mp3
+/Users/devmode/Desktop/swag_vp/Music/cut_songs/cut_song3.mp3
 
 PSY
-/cut_song4.mp3
+/Users/devmode/Desktop/swag_vp/Music/cut_songs/cut_song4.mp3

@@ -10,8 +10,8 @@ class FileParser
 
 	def initialize(username)
 
-		@filename = '../../db/data/songs.txt'
-
+		@filename = "/Users/devmode/Desktop/swag_vp/SWAG_VP/db/data/songs.txt"
+		read_file
 	end
 
 	def read_file
@@ -33,10 +33,15 @@ class FileParser
 		$song_hash
 	end
 
+	# song_path = song_path.to_s
+	
 	def play_song(song_path)
 		View.start_song
 		sleep(2)
-		`afplay db/data/cut_song1.mp3`
+		`afplay #{song_path}`
+		# system("echo #{song_path.to_s}")
+		# output = `afplay #{song_path}`
+		# puts output
 	end
 
 	def evaluate_guess
@@ -74,4 +79,3 @@ end
 
 # file_parser = FileParser.new()
 
-# puts file_parser.read_file
