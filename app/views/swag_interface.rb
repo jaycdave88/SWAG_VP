@@ -2,6 +2,14 @@ require_relative '../../config/application'
 
 # puts "Hello! I'm your swag_interface, being required correctly."
 
+SWAG_LOGO = "███████╗██╗    ██╗ █████╗  ██████╗      ██████╗ ██╗   ██╗██╗███████╗
+██╔════╝██║    ██║██╔══██╗██╔════╝     ██╔═══██╗██║   ██║██║╚══███╔╝
+███████╗██║ █╗ ██║███████║██║  ███╗    ██║   ██║██║   ██║██║  ███╔╝ 
+╚════██║██║███╗██║██╔══██║██║   ██║    ██║▄▄ ██║██║   ██║██║ ███╔╝  
+███████║╚███╔███╔╝██║  ██║╚██████╔╝    ╚██████╔╝╚██████╔╝██║███████╗
+╚══════╝ ╚══╝╚══╝ ╚═╝  ╚═╝ ╚═════╝      ╚══▀▀═╝  ╚═════╝ ╚═╝╚══════╝
+                                                                    "
+
 class String
   # colorization
   def colorize(color_code)
@@ -32,11 +40,24 @@ class String
     colorize(34)
   end
 
+  def blinking
+    colorize(25)
+  end
+
+
 end
 
 class View
 
+  def self.draw_line
+    puts "="*68
+    puts ""
+  end
+
   def self.welcome_message
+    draw_line
+    puts SWAG_LOGO
+    draw_line
     puts "Hello and welcome to the Swag Music Quiz"
   end
 
@@ -65,7 +86,7 @@ class View
   end
 
   def self.ask_question
-    puts "Whats the artist?!".white
+    puts "Whats the artist?!".white.blinking
   end
 
   def self.incorrect
@@ -76,6 +97,10 @@ class View
     puts "Congratulations!!!".green
     puts"--------------------".white
     puts "You got it correct!".green
+  end
+
+  def self.clear_screen
+    print "\e[2J"
   end
 
 

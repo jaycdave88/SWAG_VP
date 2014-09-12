@@ -37,7 +37,7 @@ class FileParser
 
 	def play_song(song_path)
 		View.start_song
-		sleep(2)
+		sleep(1)
 		`afplay #{song_path}`
 	end
 
