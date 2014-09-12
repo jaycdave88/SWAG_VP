@@ -25,13 +25,20 @@ class Controller
     song_count.times do
       current_song = game_session.cue_next_song
       start_playing_song(current_song)
-      start_timer
-      until ( guess == correct || song_finished? )
-        accept_guesses
+      # start_timer
+      # until ( guess == correct || song_finished? )
+      #   accept_guesses
+      # end
+      # stop_timer
+      sleep(6) #sleep 6 seconds
+      if evaluate_guess(View.get_guess) then
+        increment_score
+        View.correct_message
+      else
+        View.incorrect_message
       end
-      stop_timer
-      increment_score
-      reset_timer
+
+      # reset_timer
     end
   end
 
