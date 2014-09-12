@@ -1,8 +1,14 @@
-artist name
-(path)
+Aqua
+/cut_song1.mp3
 
-this is test number 2
-test2
+Queen
+/cut_song5.mp3
 
-this is going to be test number 3
-test3
+Carly Rae Jepsen
+/cut_song2.mp3
+
+Taylor Swift
+/cut_song3.mp3
+
+PSY
+/cut_song4.mp3

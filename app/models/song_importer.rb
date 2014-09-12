@@ -1,4 +1,5 @@
 require_relative '../../config/application'
+puts "Hello! I'm your model, being required correctly."
 
 $song_hash = {}
 $finished_songs = {}
@@ -35,21 +36,21 @@ class FileParser
 	def play_song(song_path)
 		View.start_song
 		sleep(2)
-		`open song_path`
+		`afplay db/data/cut_song1.mp3`
 	end
 
 	def evaluate_guess
 		sleep(6)
 		View.ask_question
 		evaluate_guess = gets.chomp
-			if evaluate_guess == key
-				View.correct
-				increment_score
-			else
-				View.incorrect
-			end
+		if evaluate_guess == key
+			View.correct
+			increment_score
+		else
+			View.incorrect
 		end
 	end
+
 
 	def cue_next_song
 		$finished_songs << $song_hash.pop
@@ -61,16 +62,16 @@ class FileParser
 		end
 	end
 
-	 def increment_score
-    $score += 1
-  end
-
-
-
-end
+	def increment_score
+		$score += 1
+	end
 end
 
 
-file_parser = FileParser.new()
+# end
+# end
 
-puts file_parser.read_file
+
+# file_parser = FileParser.new()
+
+# puts file_parser.read_file

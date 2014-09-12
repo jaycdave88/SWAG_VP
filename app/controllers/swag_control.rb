@@ -9,7 +9,7 @@ class Controller
     username = View.get_user_details
     game_session = FileParser.new(username)
 
-    run_game
+    self.run_game(game_session)
 
     View.display_final_score(score)
     View.display_answers
@@ -21,11 +21,11 @@ class Controller
 
   end
 
-  def run_game(song_count=5)
+  def self.run_game(game_session,song_count=5)
     song_count.times do
 
       current_song = $song_hash.values[0]
-      play_song(current_song)
+      game_session.play_song(current_song)
       evaluate_guess
       cue_next_song
       # start_timer
@@ -70,4 +70,4 @@ class Controller
 
   end
 
-end
+# end
