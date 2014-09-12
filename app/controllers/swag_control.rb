@@ -13,6 +13,7 @@ class Controller
 
     View.display_final_score
     View.display_answers
+    game_session.restart_game
   end
 
   def self.run_game(game_session,song_count=5)
@@ -21,10 +22,11 @@ class Controller
       game_session.play_song(current_song)
       game_session.evaluate_guess
       game_session.cue_next_song
+      puts "Hit 'RETURN/ENTER' when you are ready for the next song!!"
+      gets.chomp
       View.clear_screen
       end
-    end
   game_session.reload
-  game_session.restart_game
     end
-  end
+    end
+  # end

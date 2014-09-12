@@ -11,7 +11,7 @@ class FileParser
 
 	def initialize(username)
 
-		@filename = "/Users/apprentice/Desktop/swag_vp/SWAG_VP/db/data/songs.txt"
+		@filename = "/Users/devmode/Desktop/swag_vp/SWAG_VP/db/data/songs.txt"
 		read_file
 	end
 
