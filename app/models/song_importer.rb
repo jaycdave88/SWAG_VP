@@ -37,7 +37,7 @@ class FileParser
 
 	def play_song(song_path)
 		View.start_song
-		sleep(2)
+		sleep(1)
 		`afplay #{song_path}`
 		# system("echo #{song_path.to_s}")
 		# output = `afplay #{song_path}`
@@ -45,10 +45,9 @@ class FileParser
 	end
 
 	def evaluate_guess
-		sleep(6)
 		View.ask_question
-		evaluate_guess = gets.chomp
-		if evaluate_guess == key
+		guess = gets.chomp
+		if guess == key
 			View.correct
 			increment_score
 		else
