@@ -1,6 +1,6 @@
 require_relative '../../config/application'
 
-puts "Hello! I'm your swag_interface, being required correctly."
+# puts "Hello! I'm your swag_interface, being required correctly."
 
 SWAG_LOGO = "███████╗██╗    ██╗ █████╗  ██████╗      ██████╗ ██╗   ██╗██╗███████╗
 ██╔════╝██║    ██║██╔══██╗██╔════╝     ██╔═══██╗██║   ██║██║╚══███╔╝
@@ -78,7 +78,7 @@ class View
 
   def self.display_answers
     puts "Here are the correct answers to all the songs:"
-    puts "[#{$song_hash.keys}]".blue
+    puts "#{$song_hash.keys.join(", ")}".blue
   end
 
   def self.start_song

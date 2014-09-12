@@ -1,8 +1,9 @@
 require_relative '../../config/application'
-puts "Hello! I'm your model, being required correctly."
+# puts "Hello! I'm your model, being required correctly."
 
 $song_hash = {}
 $finished_songs = {}
+$score = 0
 
 class FileParser
 
@@ -25,6 +26,7 @@ class FileParser
 					else
 						answer =line.sub("\n","")
 						$song_hash[artist] = answer
+						$finished_songs[artist] = answer
 					end
 					index += 1
 				end
@@ -33,21 +35,17 @@ class FileParser
 		$song_hash
 	end
 
-	# song_path = song_path.to_s
-
 	def play_song(song_path)
 		View.start_song
 		sleep(1)
 		`afplay #{song_path}`
-		# system("echo #{song_path.to_s}")
-		# output = `afplay #{song_path}`
-		# puts output
 	end
 
 	def evaluate_guess
+
 		View.ask_question
-		guess = gets.chomp
-		if guess == key
+		evaluate_guess = gets.chomp
+		if evaluate_guess == $song_hash.keys[0]
 			View.correct
 			increment_score
 		else
@@ -57,24 +55,30 @@ class FileParser
 
 
 	def cue_next_song
-		$finished_songs << $song_hash.pop
+		$song_hash.delete("#{$song_hash.keys[0]}")
 	end
 
 	def reload
-		$finished_songs.each do |finished_song|
-			$song_hash << finished_song
+		$song_hash = $finished_songs
 		end
 	end
 
 	def increment_score
 		$score += 1
 	end
-end
-
 
 # end
-# end
+	public
+	def restart_game
+		puts"Would you like to replay?"
+		resonse = gets.chomp
+			if resonse == "yes"
+				Controller.run
+			else
+				puts "Thanks for playing!"
+			end
+
+	end
 
 
-# file_parser = FileParser.new()
 
